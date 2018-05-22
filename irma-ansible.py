@@ -116,6 +116,7 @@ class IrmaConfig(object):
                     ansible_inventory += " ansible_connection=local"
                 ansible_inventory += " ansible_ssh_private_key_file="
                 ansible_inventory += "'~/.vagrant.d/insecure_private_key'"
+            ansible_inventory += "\n"
 
         ansible_inventory += "\n\n"
         for (group, servers_list) in self.ansible_groups.items():
